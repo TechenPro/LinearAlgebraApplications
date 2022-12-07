@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:linalg="clr-namespace:LinearAlgebraApplications;assembly=LinearAlgebraApplications"
+             x:Class="LinearAlgebraApplications.MainPage">
+
+    <ContentPage.Resources>
+        <linalg:DrawPanel x:Key="drawable1"
+                             x:Name="drawPanel"/>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <HorizontalStackLayout HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Spacing="20">
+                <Label
+                Text="Enter Angle and Axis to Rotate"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Enter Angle and Axis"
+                FontSize="18"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+                <Entry x:Name="angleEntry" Placeholder="Angle (in degrees)"/>
+                <Entry x:Name="axisEntry" Placeholder="Axis (X, Y, Z)"/>
+                <Button
+                x:Name="RotateBtn"
+                Text="Rotate"
+                SemanticProperties.Hint="Rotate the cube"
+                Clicked="OnRotateClicked"
+                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Spacing="20">
+                <Label
+                Text="Enter Amount to Translate"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="EnterAmount to Translate"
+                FontSize="18"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+                <Entry x:Name="xEntry" Placeholder="X Value"/>
+                <Entry x:Name="yEntry" Placeholder="Y Value"/>
+                <Entry x:Name="zEntry" Placeholder="Z Value"/>
+                <Button
+                x:Name="TranslateBtn"
+                Text="Translate"
+                SemanticProperties.Hint="Translate the cube"
+                Clicked="OnTranslateClicked"
+                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+            <Button
+                x:Name="ResetBtn"
+                Text="Reset Cube"
+                SemanticProperties.Hint="Reset the cube"
+                Clicked="OnResetClicked"
+                HorizontalOptions="Center" />
+            <Border Stroke="#000000"
+                    StrokeThickness="4"
+                    StrokeShape="Rectangle"
+                    HorizontalOptions="Center">
+                <GraphicsView Drawable="{StaticResource drawable1}"
+                              x:Name="graphicsView"
+                              HeightRequest="600"
+                              WidthRequest="600" />
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
