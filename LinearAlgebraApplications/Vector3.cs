@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace LinearAlgebraApplications
 {
     /// <summary>
-    /// Representation of a 3-Dimensional vector, with built-in methods for transforming and scaling vectors
+    /// Representation of a 3-Dimensional vector, with methods for various operations on the vector
     /// </summary>
     internal class Vector3
     {
