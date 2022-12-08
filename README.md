@@ -3,6 +3,8 @@ An application that builds a representation of a cube in 3D cartesian space, and
 
 This application is built with the MAUI Multi-PLatform Framework
 
+The models for a 4x4 matrix and a Vector3 have many more capabilities than just the rotation and translation of a cube. The Vector3 and Matrix4x4 classes can be used to model anything that can be represented as a collection of points and/or vectors, and then can be used to transform these structures.
+
 ## Running the app
 ---
 ### With Visual Studio:
